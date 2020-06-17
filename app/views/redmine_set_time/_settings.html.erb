@@ -1,0 +1,15 @@
+<p>
+  <label> Send Email on:</label>
+  <% (0..6).each do |wday| %>
+   <%= check_box_tag "settings[send_mail_on_#{wday}]", "1", @settings["send_mail_on_#{wday}"]  %> <%= t('date.day_names')[wday] %>
+  <% end %>
+</p>
+
+<p>
+  <label> User daily Capacity:</label>
+    <%= select_tag "settings[daily_capacity_cf_id]", options_for_select(UserCustomField.where(field_format: ['int', 'float']).pluck(:name, :id), selected: @settings['daily_capacity_cf_id'] ) %>
+</p>
+<p>
+  <label> Threshold:</label>
+    <%= number_field_tag "settings[threshold]", @settings['threshold']  %>
+</p>

@@ -1,0 +1,3 @@
+# English strings go here for Rails i18n
+en:
+  permission_log_foreign_time: Log spent time for other users

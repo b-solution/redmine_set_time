@@ -1,0 +1,12 @@
+Hello <%= @user.name %>
+<% if  @time_logged <= @minimum_needed %>
+You have not fully logged your time:
+- Currently: <%= @time_logged %>
+- Minimum needed: <%= @minimum_needed  %>
+- Daily capacity needed: <%= @capacity %>
+<% else  %>
+  You have Overbooked your time:
+  - Currently: <%= @time_logged %>
+  - maximum capacity needed: <%= @minimum_needed  %>
+  - Daily capacity needed: <%= @capacity %>
+<% end  %>

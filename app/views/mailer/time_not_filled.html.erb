@@ -1,0 +1,11 @@
+Hello <%= @admin.name %>,
+This is the list of all User that they did not fill their time for today:
+<hr/>
+<ul>
+  <% @users.each do |user| %>
+    <li> <%= user.name %></li>
+  <% end %>
+</ul>
+
+<hr/>
+Thanks
